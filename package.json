@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preplaywright": "node utils/clearScreens.js",
     "playwright": "node specs/simple.test.js",
     "test": "mocha ./specs/**/*.test.js --timeout 10000"
   },

@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        choice(name: 'browser', choices: ['chromium', 'firefox'], description: 'Pick browser')
+        choice(name: 'browser', choices: ['chromium', 'firefox', 'webkit'], description: 'Pick browser')
     }
 
     stages {
@@ -11,7 +11,7 @@ pipeline {
                 git 'https://github.com/VladimirCW/playwright_test.git'
             }
         }
-        stage('Unit tests') {
+        stage('Tests') {
             steps {
                 bat 'npm i'
                 bat 'npm run playwright --browser=%browser%'
