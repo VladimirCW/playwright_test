@@ -1,0 +1,20 @@
+{
+  "name": "playwright_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "playwright": "node specs/simple.test.js",
+    "test": "mocha ./specs/**/*.test.js --timeout 10000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "playwright": "^1.6.2",
+    "socket.io": "^3.0.3",
+    "socket.io-client": "^3.0.3"
+  }
+}
