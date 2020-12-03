@@ -14,8 +14,8 @@ pipeline {
         }
         stage('Tests') {
             steps {
-                bat 'npm i'
-                bat 'npm run playwright --browser=%browser%'
+                sh 'npm i'
+                sh 'npm run playwright --browser=${browser}'
                 //sh 'mvn clean -DsuiteXmlFile=unit_testng.xml test'
             }
         }
