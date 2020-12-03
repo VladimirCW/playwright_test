@@ -1,5 +1,6 @@
 pipeline {
-    agent any
+    agent { docker { image 'mcr.microsoft.com/playwright:bionic' } }
+    //agent any
 
     parameters {
         choice(name: 'browser', choices: ['chromium', 'firefox', 'webkit'], description: 'Pick browser')
